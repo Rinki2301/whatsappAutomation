@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{
+    {% block body  %}  
+    <div class="container my-3">
+        <form action="SendData" method="POST"> 
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="Message">Enter Message</label>
+                <textarea name ="Message" id="Message" rows="5" class="form-control" placeholder="Write Message"></textarea>
+            </div> <br>
+            <div class="image">
+                <label for="image">Enter Image Path</label>
+                <input type="text" id="image" class="form-control" name="imagePath">  
+            </div> <br>
+            
+            <input type="submit" value="Send" class="btn btn-success btn-lg" name="loginbtn" style="margin: 0; position: absolute;
+            left: 50%;">
+        </form>
+    </div>
+    {% endblock body  %}
+}

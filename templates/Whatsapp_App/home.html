@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{
+    {% block body  %}  
+    <div class="col-12">
+      <form method="post" action="message">
+        {% csrf_token %}
+        <input type="submit" value="Login" class="btn btn-success" name="loginbtn" style="margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);">
+      </form>
+    </div>
+    {% endblock body  %}
+}
